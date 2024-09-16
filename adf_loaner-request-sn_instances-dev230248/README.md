@@ -55,7 +55,7 @@ A **ServiceNow-based application** designed to automate the process of requestin
   - **Business Rules**: Automates back-end processes, ensuring that data is processed correctly.
   - **Flow Designer**: A visual tool to create workflows, handling the routing and approval processes for requests.
   
-  ![studio overview](./screenshots/studio2.png)
+  ![studio overview](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/studio1.png)
   ![studio overview](./screenshots/studio1.png)
 
 ---
