@@ -55,29 +55,28 @@ A **ServiceNow-based application** designed to automate the process of requestin
   - **Business Rules**: Automates back-end processes, ensuring that data is processed correctly.
   - **Flow Designer**: A visual tool to create workflows, handling the routing and approval processes for requests.
   
-  ![studio overview](./screenshots/studio2.png)
-  ![studio overview](./screenshots/studio1.png)
-
+  -![studio overview](adf_loaner-request-sn_instances-dev230248\0beb958247a41210356157f1d16d43b6\screenshots\studio1.png)
+  -![studio overview](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/studio1.png)
 ---
 
 ## Publishing to GitLab
 
 1. **Linking Source Control**:
    - Navigate to **Studio** > **Source Control** > **Link to Source Control**.
-   - ![credentials](./screenshots/credentials.png)
+   - ![credentials](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/credentials.png)
    - Link GitLab to ServiceNow Studio.
-   - ![linking](./screenshots/linking to source.png)
+   - ![linking](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/linking%20to%20source.png)
    - Enter your GitLab repository URL and credentials.
    - Select the branch (e.g., main) and commit the changes.
-   - ![commits](./screenshots/commiting files to gitlab.png)
+   - ![commits](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/commiting%20files%20to%20gitlab.png)
    - After successful commit.
-   - ![succesfull commit](./screenshots/comitt success.png)
+   - ![succesfull commit](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/comitt%20success.png)
 
 2. **Commit and Push**:
    - Once linked, any changes made in the ServiceNow Studio, such as updates to Client Scripts, UI Actions, or Business Rules, can be committed to GitLab.
    - Collaborators can merge code from different branches and continue developing on separate features.
    - The overview of the source after some files are pushed to a specific branch is like:
-   - ![look](./screenshots/look.png)
+   - ![look](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/look.png)
 
 ---
 
@@ -107,14 +106,14 @@ The loan request application features distinct forms for users and admins to str
 - **Notifications**: Get updates on request status.
 
 ### Form Visuals:
-- ![Loan Request Form](./screenshots/request form.png)
-- ![Self-Service View](./screenshots/self view.png)
+- ![Loan Request Form](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/request%20form.png)
+- ![Self-Service View](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/self%20view.png)
 
 ### 1. Client Scripts
 - **Purpose**: To control the form behavior and validate user input.
 - **Example**: If the user selects the configuration item **Lenovo**, the "item type" field becomes **LAPTOP**. Conversely, for other items, the type field changes accordingly.
-- ![client code](./screenshots/client code.png)
-- ![client script](./screenshots/client script(phones).png)
+- ![client code](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/client%20code.png)
+- ![client script](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/client%20script(phones).png)
 
 ### 2. UI Actions
 - **Purpose**: Adds buttons or other actions on forms for user interaction.
@@ -123,90 +122,41 @@ The loan request application features distinct forms for users and admins to str
 ### 3. UI Policies
 - **Purpose**: Enforces rules on forms, such as making fields visible or read-only based on conditions.
 - **Example**: For the **depot** field, if "other" is selected, the "other" field becomes mandatory.
-- ![ui policy](./screenshots/ui policy.png)
+- ![ui policy](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/ui%20policy.png)
 
 ### 4. Business Rules
 - **Purpose**: Server-side automation for data processing.
 - **Example**: Automatically update the city and country of the requested user when the data is submitted.
-- ![Business rule](./screenshots/br.png)
+- ![Business rule](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/br.png)
 
 ### 5. Flow Designer
 - **Purpose**: Automates workflows for processes like approval, creating tasks, waiting for location, before deployment, post-deployment, and closure.
 - **Example**: A flow that routes loan requests through multiple approval stages based on the value of the item.
-- ![flow](./screenshots/flow1.png)
-- ![flow view](./screenshots/flow view.png)
+- ![flow](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/flow1.png)
+- ![flow view](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/flow%20view.png)
 - Before the trigger starts:
   - Trigger for a flow looks like:
   - In this app, I have used the trigger condition as the **laptop state is reserved**.
-  - ![trigger](./screenshots/trigger.png)
-- Sub-tasks creation when a flow starts:
-  - ![sub flow](./screenshots/flowcreation(subtasks).png)
-  - ![flow designer initial](./screenshots/flowdesigner (initial).png)
-  - ![flow designer stage1](./screenshots/flowdesigner(stage1).png)
+  - ![trigger](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/flow%20trigger.png)
 
 ---
 
 ## Project Sketch
 
-Here's a high-level overview of how the Loaner Request Application is structured:
+Here’s a visual representation of the application’s workflow:
 
-[User Interface] | [Loan Request Form] --> [Business Rule (On Submit)] --> [Flow Designer (Approval Workflow)] | [Database] --> [Inventory Management] --> [Notifications] | [Admin Dashboard] --> [UI Actions] --> [Track Requests]
-
-- **Project Sketch Image**:
-  ![Project Sketch](./screenshots/project-sketch.png)
-
-  **Admin Login Flow**
-  |
-  |-- Admin Login
-  |    |
-  |    |-- Open Request Form
-  |         |
-  |         |-- Fill Request Form
-  |         |    |-- User Information
-  |         |    |-- Loaner Item
-  |         |    |-- Request Details
-  |         |    |-- Configuration Item Type (Automatic)
-  |         |    |-- Order Date Validation
-  |         |    |-- Return Date Validation
-  |         |
-  |         |-- Assign Location (Automatic)
-  |         |
-  |         |-- Submit Request
-  |              |
-  |              |-- Start Workflow
-  |                   |-- Approval Process
-  |                   |-- Inventory Check
-  |                   |-- User Notification
-  |
-  |-- User Flow Visibility
-  |    |
-  |    |-- Request Tracking
-  |    |-- View Workflow
-  |
-  |-- Different Views
-      |
-      |-- Admin View
-      |-- Requester View
-
-- ![flow chart](./screenshots/flowchart.png)
+![Project Sketch](adf_loaner-request-sn_instances-dev230248/0beb958247a41210356157f1d16d43b6/screenshots/sketch.png)
 
 ---
 
 ## Contributing
 
-Contributions are welcome! Feel free to fork this repository and make improvements. Submit a pull request for review, and ensure that all contributions are well-documented.
-
----
+If you would like to contribute to this project, please fork the repository and submit a pull request with your proposed changes.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
-
----
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-For any inquiries or feedback, contact:
-
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile)
+For any questions or feedback, please contact [your.email@example.com](mailto:your.email@example.com).
