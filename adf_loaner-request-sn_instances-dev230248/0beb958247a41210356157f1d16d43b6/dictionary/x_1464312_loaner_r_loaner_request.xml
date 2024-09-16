@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b96c1d4647a41210356157f1d16d4379" extends="task" label="loaner request" max_length="40" name="x_1464312_loaner_r_loaner_request" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" default="cmdb_ci_computer" label="item type" max_length="40" name="u_choice_4" type="string">
+            <choice>
+                <element inactive_on_update="false" label="laptop" sequence="0" value="cmdb_ci_computer"/>
+                <element inactive_on_update="false" label="projector" sequence="2" value="cmdb_ci_projector"/>
+                <element inactive_on_update="false" label="mobile phone" sequence="1" value="cmdb_ci_mobile_device"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="sc" label="depot" max_length="40" name="u_choice_5" type="string">
+            <choice>
+                <element inactive_on_update="false" label="newyork" sequence="0" value="ny"/>
+                <element inactive_on_update="false" label="london" sequence="1" value="london"/>
+                <element inactive_on_update="false" label="santa clara" sequence="3" value="sc"/>
+                <element inactive_on_update="false" label="other" sequence="5" value="other"/>
+                <element inactive_on_update="false" label="buenos aired" sequence="2" value="ba"/>
+                <element inactive_on_update="false" label="sydney" sequence="4" value="sydney"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="loacation to be used" max_length="40" name="loacation_to_be_used" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="start_date" mandatory="true" max_length="40" name="u_glide_date_time_2" type="glide_date_time"/>
+        <element attributes="encode_utf8=false" label="req for" mandatory="true" max_length="32" name="u_reference_1" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="location to be used" max_length="40" name="u_string_7" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="requested for" max_length="40" name="requested_for" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="sta" max_length="40" name="u_choice_6" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Choice 2" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="Choice 3" sequence="2" value="Choice 3"/>
+                <element inactive_on_update="false" label="Choice 1" sequence="0" value="Choice 1"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="other" max_length="40" name="u_string_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="end_date" mandatory="true" max_length="40" name="u_glide_date_3" type="glide_date"/>
+    </element>
+</database>

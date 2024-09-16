@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="loacation_to_be_used" label="loacation to be used" language="en" table="x_1464312_loaner_r_loaner_request">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>loacation_to_be_used</element>
+            <help/>
+            <hint/>
+            <label>loacation to be used</label>
+            <language>en</language>
+            <name>x_1464312_loaner_r_loaner_request</name>
+            <plural>loacation to be used</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-09-11 18:08:38</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>loacation to be used</sys_name>
+            <sys_package display_value="loaner request" source="x_1464312_loaner_r">0beb958247a41210356157f1d16d43b6</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="loaner request">0beb958247a41210356157f1d16d43b6</sys_scope>
+            <sys_update_name>sys_documentation_x_1464312_loaner_r_loaner_request_loacation_to_be_used_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-09-11 18:08:38</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
