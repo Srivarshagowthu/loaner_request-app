@@ -1,7 +1,9 @@
 # Loaner Request Application
 
 A **ServiceNow-based application** designed to automate the process of requesting, approving, and tracking loaner items such as laptops, projectors, or other assets. The application offers a seamless self-service experience, complete with approval workflows, inventory management, and real-time tracking.
-
+## overview
+![studio overview](screenshots/flowchart.png)
+  
 ## Table of Contents
 
 - [Advantages](#advantages)
@@ -57,7 +59,7 @@ A **ServiceNow-based application** designed to automate the process of requestin
   - **Flow Designer**: A visual tool to create workflows, handling the routing and approval processes for requests.
 
   ![studio overview](screenshots/studio2.png)
-  ![studio overview](screenshots/client-code.png)
+  
 
 ---
 
@@ -68,12 +70,12 @@ A **ServiceNow-based application** designed to automate the process of requestin
    - Navigate to **Studio** > **Source Control** > **Link to Source Control**.
    - ![credentials](screenshots/credentials.png)
    - Link GitLab to ServiceNow Studio.
-   - ![linking](screenshots/linking-to-source.png)
+   - ![linking](screenshots/linkingtosource.png)
    - Enter your GitLab repository URL and credentials.
    - Select the branch (e.g., main) and commit the changes.
-   - ![commits](screenshots/committing-files-to-gitlab.png)
+   - ![commits](screenshots/commitingfilestogitlab.png)
    - After successful commit.
-   - ![success](screenshots/commit-success.png)
+   - ![success](screenshots/comittsuccess.png)
 
 2. **Commit and Push**:
 
@@ -114,15 +116,15 @@ The loan request application features distinct forms for users and admins to str
 
 ### Form Visuals:
 
-- ![Loan Request Form](screenshots/request-form.png)
-- ![Self-Service View](screenshots/self-view.png)
+- ![Loan Request Form](screenshots/requestform.png)
+- ![Self-Service View](screenshots/selfview.png)
 
 ### 1. Client Scripts
 
 - **Purpose**: To control the form behavior and validate user input.
 - **Example**: If the user selects the configuration item **Lenovo**, the "item type" field becomes **LAPTOP**. Conversely, for other items, the type field changes accordingly.
-- ![client code](screenshots/client-code.png)
-- ![client script](screenshots/client-script-phones.png)
+- ![client code](screenshots/clientcode.png)
+- ![client script](screenshots/clientscript(phones).png)
 
 ### 2. UI Actions
 
@@ -133,20 +135,20 @@ The loan request application features distinct forms for users and admins to str
 
 - **Purpose**: Enforces rules on forms, such as making fields visible or read-only based on conditions.
 - **Example**: For the **depot** field, if "other" is selected, the "other" field becomes mandatory.
-- ![ui policy](screenshots/ui-policy.png)
+- ![ui policy](screenshots/uipolicy.png)
 
 ### 4. Business Rules
 
 - **Purpose**: Server-side automation for data processing.
 - **Example**: Automatically update the city and country of the requested user when the data is submitted.
-- ![Business rule](screenshots/business-rule.png)
+- ![Business rule](screenshots/br.png)
 
 ### 5. Flow Designer
 
 - **Purpose**: Automates workflows for processes like approval, creating tasks, waiting for location, before deployment, post-deployment, and closure.
 - **Example**: A flow that routes loan requests through multiple approval stages based on the value of the item.
 - ![flow](screenshots/flow1.png)
-- ![flow view](screenshots/flow-view.png)
+- ![flow view](screenshots/flowview.png)
 
 - Before the trigger starts:
   - Trigger for a flow looks like:
@@ -155,7 +157,7 @@ The loan request application features distinct forms for users and admins to str
   
 - Sub-tasks creation when a flow starts:
   - When the flow starts, the sub-tasks get created in ServiceNow. The example workflow creates sub-tasks for different departments.
-  - ![sub-task](screenshots/sub-task.png)
+  - ![sub-task](screenshots/flowcreation(sub tasks).png)
 
 ---
 
@@ -167,7 +169,7 @@ The loan request application features distinct forms for users and admins to str
 - **Approval Workflow**: Request goes through an approval process.
 - **Fulfillment**: Request is fulfilled or rejected based on approval status.
 - **Inventory Management**: Updates available items and manages inventory levels.
-- ![Flow Diagram](screenshots/flow-diagram.png)
+- ![Flow Diagram](screenshots/flowchart.png)
 
 ### Additional Steps
 
