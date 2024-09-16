@@ -56,7 +56,7 @@ A **ServiceNow-based application** designed to automate the process of requestin
   - **Business Rules**: Automates back-end processes, ensuring that data is processed correctly.
   - **Flow Designer**: A visual tool to create workflows, handling the routing and approval processes for requests.
 
-  ![studio overview](screenshots/studio2.png)
+  - ![studio overview](screenshots/studio2.png)
   
 
 ---
@@ -72,7 +72,7 @@ A **ServiceNow-based application** designed to automate the process of requestin
    - Select the branch (e.g., main) and commit the changes.
    - ![commits](screenshots/committingfilestogitlab.png)
    - After successful commit.
-   - ![success](screenshots/commitsuccess.png)
+   - ![success](screenshots/committsuccess.png)
 
 2. **Commit and Push**:
    - Once linked, any changes made in the ServiceNow Studio, such as updates to Client Scripts, UI Actions, or Business Rules, can be committed to GitLab.
@@ -129,7 +129,7 @@ The loan request application features distinct forms for users and admins to str
 ### 4. Business Rules
 - **Purpose**: Server-side automation for data processing.
 - **Example**: Automatically update the city and country of the requested user when the data is submitted.
-- ![Business rule](screenshots/businessrule.png)
+- ![Business rule](screenshots/br.png)
 
 ### 5. Flow Designer
 - **Purpose**: Automates workflows for processes like approval, creating tasks, waiting for location, before deployment, post-deployment, and closure.
